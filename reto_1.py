@@ -52,11 +52,15 @@ def llenarPila():
             print("El codigo no puede estar vacio.")
         else:
             print(push(item, capacity))
+        while True: 
+         answer = input("Desea ingresar otra caja [S | N]: ")
 
-        answer = input("Desea ingresar otra caja [S | N]: ")
-
-        if answer.lower() == "n":
-            break
+         if answer.lower() == "s":
+             break
+         elif answer.lower() == "n":
+            return
+         else:
+            print("Opcion invalida, debe ser S o N ")
 
 
 def desapilar():
@@ -65,7 +69,7 @@ def desapilar():
         if isEmpty():
             print("La pila esta vacia.")
             break
-
+    
         answer = input("Desea desapilar [S | N]: ")
 
         if answer.lower() == "s":
